@@ -96,7 +96,6 @@
             background-color: #f5426e;
         }
 
-        /* Heart and Sunflower rain effect using emojis */
         .heart, .sunflower {
             position: absolute;
             top: -50px;
@@ -163,24 +162,21 @@
     </div>
 
     <script>
-        // Open the modal
         function openModal() {
             document.getElementById("myModal").style.display = "flex";
         }
 
-        // Close the modal
         function closeModal() {
             document.getElementById("myModal").style.display = "none";
         }
 
-        // Close modal when clicking outside of the modal content
         window.onclick = function(event) {
             if (event.target == document.getElementById("myModal")) {
                 closeModal();
             }
         }
 
-        // Heart and sunflower rain on hover
+
         const header = document.getElementById('header');
         header.addEventListener('mouseenter', () => {
             for (let i = 0; i < 20; i++) {
@@ -198,7 +194,7 @@
                 sunflower.style.animationDuration = Math.random() * 3 + 2 + 's';
                 document.body.appendChild(sunflower);
 
-                // Remove the heart and sunflower after the animation ends
+             
                 setTimeout(() => {
                     heart.remove();
                     sunflower.remove();
